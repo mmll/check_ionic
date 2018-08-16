@@ -1,0 +1,8 @@
+{
+  "name": "check_ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "710825a4"
+}
