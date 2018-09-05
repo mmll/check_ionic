@@ -1,17 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Goal
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
+    <ion-card *ngFor = "let goal of goalList">
+      <div class="card-title">{{goal.name}}</div>
+      <div class="card-subtitle">{{goal.time}}</div>
+    </ion-card>
+
     <button ion-button full [navPush]="this.goalPage">New goal</button>
 
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <!--<ion-list-header>Follow us on Twitter</ion-list-header>-->
   </ion-list>
 
 </ion-content>

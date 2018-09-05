@@ -1,0 +1,13 @@
+{
+    "goal": [
+                { "id": 1, "name": "json-server", "startDate": "startDate", "endDate":"endDate", "time":"8" },
+                { "id": 2, "name": "json-server", "startDate": "startDate", "endDate":"endDate", "time":"7" },
+                { "id": 3, "name": "json-server", "startDate": "startDate", "endDate":"endDate", "time":"6" },
+                { "id": 4, "name": "json-server", "startDate": "startDate", "endDate":"endDate", "time":"5" }
+            ]
+        ,
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+}

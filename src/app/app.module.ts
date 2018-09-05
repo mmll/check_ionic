@@ -16,6 +16,9 @@ import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SignupServiceProvider } from '../providers/signup-service/signup-service';
+import { GoalServiceProvider } from '../providers/goal-service/goal-service';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { SignupServiceProvider } from '../providers/signup-service/signup-servic
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SignupServiceProvider
+    SignupServiceProvider,
+    GoalServiceProvider,
+    HttpClientInMemoryWebApiModule
+
   ]
 })
 export class AppModule {}
