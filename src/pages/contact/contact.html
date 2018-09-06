@@ -9,14 +9,21 @@
 <ion-content>
 
     <ion-card *ngFor = "let goal of goalList">
-      <div class="card-title">{{goal.name}}</div>
-      <div class="card-subtitle">{{goal.time}}</div>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2 class="color-tag">tag <br></ion-col>
+            <ion-col class="card">
+                <p class="card-title">{{goal.name}}</p>
+                <p>{{goal.startDate}}</p>
+                <p>{{goal.endDate}}</p>
+            </ion-col>
+            <ion-col col-2 class="times-info">{{goal.time}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
     </ion-card>
 
     <button ion-button full [navPush]="this.goalPage">New goal</button>
-
-  <ion-list>
-    <!--<ion-list-header>Follow us on Twitter</ion-list-header>-->
-  </ion-list>
 
 </ion-content>

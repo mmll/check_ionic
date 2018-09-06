@@ -19,6 +19,7 @@ import { SignupServiceProvider } from '../providers/signup-service/signup-servic
 import { GoalServiceProvider } from '../providers/goal-service/goal-service';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CheckServiceProvider } from '../providers/check-service/check-service';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SignupServiceProvider,
     GoalServiceProvider,
-    HttpClientInMemoryWebApiModule
+    HttpClientInMemoryWebApiModule,
+    CheckServiceProvider
 
   ]
 })

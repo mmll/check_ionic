@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Goal } from "../../unity/goal";
 import { SERVICE_CONFIG } from "../serverConfig";
 import { Observable } from "rxjs";
-import { map } from 'rxjs/operators'
+import 'rxjs/add/operator/map'
+import {map} from "rxjs/operators";
 
 /*
   Generated class for the GoalServiceProvider provider.
@@ -29,7 +30,7 @@ export class GoalServiceProvider {
   public getGoals(): Observable <Goal[]>{
       return this.HttpClient
           .get(SERVICE_CONFIG.apiUrl + '/goal')
-          .pipe(map(list => {
+          .pipe(map((list: Array<any>) => {
               return list.map((goal) => new Goal(goal));
           }));
   }
